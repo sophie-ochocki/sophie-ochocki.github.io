@@ -1,44 +1,28 @@
-var input1 = document.getElementById("input1");
-var a = input1.value;
-var a = Number(a);
+var n_p = document.getElementById("n_p");
 
-var input2 = document.getElementById("input2");
-var b = input2.value;
-var b = Number(b);
+var o_p = document.getElementById("o_p");
 
-var input3 = document.getElementById("input3");
-var c = input3.value;
-var c = Number(c);
+var n_h = document.getElementById("n_h");
+
+var h_w = document.getElementById("h_w");
 
 var btn = document.getElementById("btn1");
 btn.addEventListener('click', myFunction);
 
-function myFunction (a,b,c){
-    var a = Number(input1.value);
-    var b = Number(input2.value);
-    var c = Number(input3.value);
+function myFunction (){
+    var a = Number(n_p.value);
+    var b = Number(o_p.value);
+    var c = Number(n_h.value);
+    var d = Number(h_w.value)
 
-    var m;
-    m = a > b ? a : b; //maximum between a and b
-    m = m > c ? m : c; // m is the max among a, b, c
-    var maximum = document.getElementById("maximum");
-    maximum.innerHTML = m;
-
-    // var max;
-    // if (a>b){
-    //     max = a;
-    // }else {
-    //     max = b;
-    // }
-    // if (c > max){
-    //     max = c;
-    // }
-
-    // if (a>=b && a >=c){
-    //     max = a;
-    // }
-    // if (b >=a && c >=b){
-    //     max = c;
-    // }
+    var w;
+    if (d>c){
+       w = (a*c)+(b*(d-c));
+       var wage = document.getElementById("wage");
+       wage.innerHTML = w;
+    }else {
+        w = d*a;
+        var wage = document.getElementById("wage");
+        wage.innerHTML = w;
+    }
 }
-
